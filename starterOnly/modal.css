@@ -26,8 +26,13 @@ p {
   padding: 0.5vw;
 }
 
-img {
+#imageLogo {
+  background: url(./Logo.png);
+  background-size: cover;
+  width: 170px;
+  height: 30px;
   padding-right: 1rem;
+  margin: 10px 0px 0px 20px;
 }
 
 .topnav {
@@ -80,7 +85,7 @@ img {
     position: absolute;
     right: 0;
     top: 0;
-    color: white;
+    color: black;
   }
   .topnav.responsive a {
     float: none;
