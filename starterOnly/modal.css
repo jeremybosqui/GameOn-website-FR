@@ -43,7 +43,7 @@ img {
 .topnav a {
   float: left;
   display: block;
-  color: #000000;
+  color: #ff0000;
   text-align: center;
   padding: 12px 12px;
   margin: 5px;
@@ -53,8 +53,7 @@ img {
 }
 
 .topnav a:hover {
-  background-color: #ff0000;
-  color: #ffffff;
+  color: #ff0000;
   border-radius: 15px;
 }
 
@@ -81,6 +80,7 @@ img {
     position: absolute;
     right: 0;
     top: 0;
+    color: white;
   }
   .topnav.responsive a {
     float: none;
