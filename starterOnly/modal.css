@@ -23,6 +23,15 @@ body {
 #SautLigne {
   display: none;
 }
+#disabled {
+  display: none;
+}
+.active1:hover {
+  display: none;
+}
+.active1 {
+  cursor: default;
+}
 p {
   margin-bottom: 0;
   padding: 0.5vw;
@@ -32,22 +41,19 @@ p {
 #imageLogo {
   background: url(./Logo.png);
   background-size: cover;
-  width: 170px;
-  height: 30px;
+  width: 250px;
+  height: 45px;
   padding-right: 1rem;
   margin: 10px 0px 0px 20px;
 }
 
 .topnav {
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
-  margin: 3.5%;
+  margin: 45px -10px 65px 30px;
 }
-.header-logo {
-    float: left;
-}
-.main-navbar {
-    float: right;
-}
+
 .topnav a {
   float: left;
   display: block;
@@ -59,15 +65,19 @@ p {
   font-size: 20px;
   font-family: Roboto, sans-serif;
 }
-
+#underLine {
+  border-bottom: 1px solid white;
+}
 .topnav a:hover {
-  
-  border-radius: 15px;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 10px;
 }
 
 .topnav a.active {
-  
-  border-radius: 15px;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 10px;
 }
 
 .topnav .icon {
@@ -551,6 +561,14 @@ footer {
   .copyrights {
     margin-top: 0px;
     text-align: center;
+  }
+  #imageLogo {
+    background: url(./Logo.png);
+    background-size: cover;
+    width: 170px;
+    height: 30px;
+    padding-right: 1rem;
+    margin: 10px 0px 0px 20px;
   }
 }
 
