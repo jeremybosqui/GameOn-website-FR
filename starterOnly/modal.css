@@ -61,14 +61,12 @@ p {
 }
 
 .topnav a:hover {
-  background-color: #ff0000;
-  color: black;
+  
   border-radius: 15px;
 }
 
 .topnav a.active {
-  background-color: #ff0000;
-  color: #ffffff;
+  
   border-radius: 15px;
 }
 
@@ -97,6 +95,9 @@ p {
     top: 0;
     color: black; 
    }
+  .topnav.responsive .icon:hover {
+    background-color: gray;
+  }
   .topnav.responsive a {
     float: none;
     display: block;
