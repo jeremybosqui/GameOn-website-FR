@@ -20,9 +20,7 @@ body {
   max-width: 1300px;
   margin: 0 auto;
 }
-#SautLigne {
-  display: none;
-}
+
 #disabled {
   display: none;
 }
@@ -101,6 +99,7 @@ p {
   #sautLigne {
     display: none;
   }
+
   .topnav a:hover {
     background-color: #ff0000c2;
     color: white;
@@ -157,9 +156,7 @@ p {
   #sautLigne {
     display: none;
   }
-  #SautLigne {
-    display: block;
-  }
+  
   .hero-content {
     padding: 0px;
   }
@@ -484,7 +481,6 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
 }
 .hero-content::after {
   content: "";
@@ -550,9 +546,7 @@ footer {
   #sautLigne {
     display: none;
   }
-  #SautLigne {
-    display: none;
-  }
+  
   .hero-content {
     background: #fff;
     color: #000;
