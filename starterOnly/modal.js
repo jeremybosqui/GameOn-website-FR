@@ -19,5 +19,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 function launchModal() {
   modalbg.style.display = "block";
 }
-
+// validation des champs du formulaire
+let fields = document.querySelectorAll('input[required], textarea [required]');
+console.log(fields);
 
