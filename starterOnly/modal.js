@@ -23,29 +23,7 @@ function launchModal() {
 }
 // fermer l'event formulaire
 closeModal.forEach((c) => c.addEventListener("click", modalClose));
-  // close modal form
+  // fermer modal form
   function modalClose(){
     modalbg.style.display = "none";
   }
-
-
-/*
-//close modal
-
-for (var i = 0; i < document.getElementsByClassName('js-close-modal').length; i++) {
-    document.getElementsByClassName('js-close-modal')[i].addEventListener('click', function () {
-        document.querySelector('.content',).classList.remove('d-flex');
-        document.querySelector('.content').classList.add('d-none');
-    })
-}
-
-// toggle modal
-
-document.querySelector('.js-toggle-modal').addEventListener('click', function(){
-    document.querySelector('.content').classList.remove('d-none');
-    document.querySelector('.content').classList.add('d-flex');
-})
-
-*/
-
-
