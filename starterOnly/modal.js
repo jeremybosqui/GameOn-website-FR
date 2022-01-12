@@ -20,32 +20,21 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 function launchModal() {
   modalbg.style.display = "block";
 }
-// validation des champs du formulaire
-let contactForm = document.getElementById('frmContact');
 
-contactForm.addEventListener('submit', (e) => {
-e.preventDefault();
-let fields = document.querySelectorAll('input[required], textarea [required]');
-console.log(fields);
-let valid = true;
 
-fields.forEach((field) => {
-   if(! validateField(field)) {
-      valid = false;
-   }
-});
-if (valid) {
-  e.target.submit();
+//close modal
+
+for (var i = 0; i < document.getElementsByClassName('js-close-modal').length; i++) {
+    document.getElementsByClassName('js-close-modal')[i].addEventListener('click', function () {
+        document.querySelector('.content',).classList.remove('d-flex');
+        document.querySelector('.content').classList.add('d-none');
+    })
 }
 
+// toggle modal
 
+document.querySelector('.js-toggle-modal').addEventListener('click', function(){
+    document.querySelector('.content').classList.remove('d-none');
+    document.querySelector('.content').classList.add('d-flex');
+})
 
-
-}, false);
-function validateField(field) {
-  if(field.checkValidity()) {
-    return true;
-  }else {
-    return false;
-  }
-}
