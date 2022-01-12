@@ -198,15 +198,7 @@ main {
   font-family: var(--font-slab);
 }
 
-/* ===========                Modal form              ================ */
-
-/*=== modal close and open ======*/
-.d-none{
-  display: none;
-}
-.d-flex {
-  display: flex;
-}
+/* Modal form */
 
 .button {
   background: #fe142f;
@@ -365,15 +357,6 @@ input[data-error]::after {
   left: 21%;
   top: 19%;
 }
-.close-modal{
-  color: #919191;
-}
-.close-modal:hover{
-  cursor: pointer;
-  color: red;
-} 
-  
-/*
 .close {
   position: absolute;
   right: 15px;
@@ -398,7 +381,7 @@ input[data-error]::after {
 }
 .close:after {
   transform: rotate(-45deg);
-} */
+}
 .btn-submit,
 .btn-signup {
   background: #fe142f;
