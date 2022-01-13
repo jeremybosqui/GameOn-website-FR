@@ -35,14 +35,17 @@ const lastName = document.getElementById("last");
 const eMail = document.getElementById("email");
 const birth = document.getElementById("birthdate");
 const numbTournament = document.getElementById("quantity");
-const location1 = document.getElementById("location1");
-const location2 = document.getElementById("location2");
-const location3 = document.getElementById("location3");
-const location4 = document.getElementById("location4");
-const location5 = document.getElementById("location5");
-const location6 = document.getElementById("location6");
-const checkbox1 = document.getElementById("checkbox1");
-const checkbox2 = document.getElementById("checkbox2");
+const loc1 = document.getElementById("location1");
+const loc2 = document.getElementById("location2");
+const loc3 = document.getElementById("location3");
+const loc4 = document.getElementById("location4");
+const loc5 = document.getElementById("location5");
+const loc6 = document.getElementById("location6");
+const checkBox1 = document.getElementById("checkbox1");
+const checkBox2 = document.getElementById("checkbox2");
+
+
+
 
 
 
