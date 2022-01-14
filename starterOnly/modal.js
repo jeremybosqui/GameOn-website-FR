@@ -42,9 +42,7 @@ const loc4 = document.getElementById("location4");
 const loc5 = document.getElementById("location5");
 const loc6 = document.getElementById("location6");
 const checkBox1 = document.getElementById("checkbox1");
-const checkBox2 = document.getElementById("checkbox2");
-
-
+const submitBtn = document.querySelector(".btn-submit")
 
 
 
