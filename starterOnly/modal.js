@@ -41,19 +41,25 @@ const loc3 = document.getElementById("location3");
 const loc4 = document.getElementById("location4");
 const loc5 = document.getElementById("location5");
 const loc6 = document.getElementById("location6");
+const form = document.getElementById("frmContact");
 const checkBox1 = document.getElementById("checkbox1");
 const submitBtn = document.querySelector(".btn-submit");
 // definition du format de la date
 
 // definition format des nombres
 const numbers = /^[0-9]+$/;
+
+//form data
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+})
 // function validate modal form
 function validate () {
   let firstNameCheck;
   let lastNameCheck;
   let eMailcheck;
   let birthCheck;
-  let numTournamentCheck;
+  let numbTournamentCheck;
   let radioButtonsCheck;
   let conditionsCheck;
 
