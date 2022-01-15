@@ -29,7 +29,7 @@ closeModal.forEach((c) => c.addEventListener("click", modalClose));
   }
 // implementation du formulaire
 
-           //liason des labels
+           //liason des labels avec les ID correspondant en definissant les constantes
 const firstName = document.getElementById("first");
 const lastName = document.getElementById("last");
 const eMail = document.getElementById("email");
@@ -42,14 +42,22 @@ const loc4 = document.getElementById("location4");
 const loc5 = document.getElementById("location5");
 const loc6 = document.getElementById("location6");
 const form = document.getElementById("frmContact");
-const checkBox1 = document.getElementById("checkbox1");
-const submitBtn = document.querySelector(".btn-submit");
 // definition du format de la date
-
+const dateFormat = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
 // definition format des nombres
 const numbers = /^[0-9]+$/;
+// definition const validation message error
+const termsConditions = document.getElementById("checkbox1");
+const errorFirst = document.getElementById("msgErrorFirst");
+const errorLast = document.getElementById("msgErrorLast");
+const errorMail = document.getElementById("msgErrorMail");
+const errorBirthDate = document.getElementById("msgErrorBirthDate");
+const errorTournament = document.getElementById("msgErrorTournament");
+const errorCity = document.getElementById("msgErrorCity");
+const errorValidation = document.getElementById("msgErrorValidation");
+// const confirmation pour soumettre le formulaire
 
-//form data
+//form data empecher le comportement basique du formulaire pour eviter l'envoie d'un formulaire vide > preventDefault
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 })

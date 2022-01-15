@@ -58,6 +58,10 @@
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
+            <div id="confirmation">
+              <h1>Merci pour <br> votre inscription</h1>
+              <button id="btn-close">Fermer</button>
+            </div>
             <form
               id="frmContact"
               method="get"
@@ -78,6 +82,7 @@
                   required
                 /><br>
               </div>
+              <div id="msgErrorFirst"></div>
               <div
                 class="formData">
                 <label for="last">Nom</label><br>
@@ -90,6 +95,7 @@
                   required
                 /><br>
               </div>
+              <div id="msgErrorLast"></div>
               <div
                 class="formData">
                 <label for="email">E-mail</label><br>
@@ -102,6 +108,7 @@
                   required
                 /><br>
               </div>
+              <div id="msgErrorMail"></div>
               <div
                 class="formData">
                 <label for="birthdate">Date de naissance</label><br>
@@ -113,11 +120,13 @@
                   required
                 /><br>
               </div>
+              <div id="msgErrorBirthDate"></div>
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input placeholder="5" type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" required>
               </div>
+              <div id="msgErrorTournament"></div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
                 class="formData">
@@ -194,6 +203,7 @@
                   Portland</label
                 >
               </div>
+              <div id="msgErrorCity"></div>
 
               <div
                 class="formData">
@@ -215,6 +225,7 @@
                 </label>
                 <br>
               </div>
+              <div id="msgErrorValidation"></div>
               <input
                 class="btn-submit"
                 type="submit"

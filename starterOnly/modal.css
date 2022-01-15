@@ -81,7 +81,11 @@ p {
 .topnav .icon {
   display: none;
 }
-
+/*========== confirmation div + button close  ===============*/
+#confirmation {
+  display: none;
+  
+}
 
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
