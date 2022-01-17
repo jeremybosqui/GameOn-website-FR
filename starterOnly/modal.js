@@ -73,7 +73,7 @@ function validate () {
 
   console.log(validate);
 
- if (!firstName.value.match(/(.*[a-z]){2}/i) || firstName.value == ' ' || firstName.value == null || firstName.value.length < 2)
+ if (!firstName.value.match(/(.*[a-z]){2}/i) || firstName.value == ' ' || firstName.value == null || firstName.value.length < 2 )
   {
     errorFirst.innerText = 'Veuillez entrer 2 caractères ou plus dans le champ du prénom';
     firstName.style.border = 'solid red 2px';
