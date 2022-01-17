@@ -74,10 +74,23 @@ function validate () {
   console.log(validate);
 
  if (!firstName.value.match(/(.*[a-z]){2}/i) || firstName.value == ' ' || firstName.value == null || firstName.value.length < 2)
-  {}
-  else {}
-if (!lastName.value.match(/(.*[a-z]){2}/i) || firstName.value == ' ' || lastName.value == null || lastName.value.length < 2)
-  {}
+  {
+    errorFirst.innerText = 'Veuillez entrer 2 caractères ou plus dans le champ du prénom';
+    firstName.style.border = 'solid red 2px';
+    errorFirst.style.color ='red';
+    errorFirst.style.marginTop = '10px';
+    errorFirst.style.fontSize ='0.8rem';
+  }
+  else {
+    errorFirst.style.display ='none';
+    firstName.style.border = 'none';
+    firstNameCheck = true;
+    
+  }
+if (!lastName.value.match(/(.*[a-z]){2}/i) || lastName.value == ' ' || lastName.value == null || lastName.value.length < 2)
+  {
+    errorLast.innerText= 'Veuillez entrer 2 caractères ou plus dans le champ du nom '
+  }
   else {}
 // email avec regex à definir if ()
 if(!birth.value.match(/^\d{4}\-(0?[1-9]|1[012]])\-(0?[1-9]|[12][0-9]|3[01])$/)) // defiinition de la birthdate avec un instruction en regex
