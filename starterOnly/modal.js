@@ -83,18 +83,29 @@ function validate () {
   }
   else {
     errorFirst.style.display ='none';
-    firstName.style.border = 'none';
+    firstName.style.border = '2px solid green';
     firstNameCheck = true;
     
   }
 if (!lastName.value.match(/(.*[a-z]){2}/i) || lastName.value == ' ' || lastName.value == null || lastName.value.length < 2)
   {
     errorLast.innerText= 'Veuillez entrer 2 caractères ou plus dans le champ du nom '
+    lastName.style.border = 'solid red 2px';
+    errorLast.style.color ='red';
+    errorLast.style.marginTop = '10px';
+    errorLast.style.fontSize ='0.8rem';
   }
-  else {}
+  else {
+    errorLast.style.display='none';
+    lastName.style.border='2px solid green';
+    lastNameCheck = true;
+  }
 // email avec regex à definir if ()
 if(!birth.value.match(/^\d{4}\-(0?[1-9]|1[012]])\-(0?[1-9]|[12][0-9]|3[01])$/)) // defiinition de la birthdate avec un instruction en regex
-  {}
+  {
+    errorBirthDate.innerText='Veuillez rentrer votre date de naissance';
+
+  }
   else {}
 if(!numbTournament.value.match(numbers)) 
 {}
