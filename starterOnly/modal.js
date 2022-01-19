@@ -13,6 +13,8 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeModal = document.querySelectorAll(".close");
+// const confirmation
+const confirmation = document.getElementById('confirmation');
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -137,9 +139,9 @@ else {
   numbTournament.classList.add('validBorder');
   numbTournamentCheck = true;
 }
-/* if(!loc1.checked && !loc2.checked && !loc3.checked && !loc4.checked && !loc5.checked && !loc6.checked) // choisir une ville avec radio buttons
+ if(!loc1.checked && !loc2.checked && !loc3.checked && !loc4.checked && !loc5.checked && !loc6.checked) // choisir une ville avec radio buttons
 {}
-else {} */
+else {}
 if(!termsConditions.checked) // validation des termes et conditions 
 {
   errorValidation.innerText='Vous devez vérifier que vous acceptez les termes et conditions';
@@ -151,6 +153,11 @@ else {
   conditionsCheck = true;
 }
 // validation si tous les elements checked sont valide 
+if (firstNameCheck == true && lastNameCheck == true && eMailcheck == true && birthCheck == true && numbTournamentCheck == true && conditionsCheck == true)
+  {
+    form.style.display='none';
+    confirmation.style.display='flex';
+  }
 }
 
 
