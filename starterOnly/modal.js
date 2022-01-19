@@ -137,16 +137,19 @@ else {
   numbTournament.classList.add('validBorder');
   numbTournamentCheck = true;
 }
-if(!loc1.checked && !loc2.checked && !loc3.checked && !loc4.checked && !loc5.checked && !loc6.checked) // choisir une ville avec radio buttons
+/* if(!loc1.checked && !loc2.checked && !loc3.checked && !loc4.checked && !loc5.checked && !loc6.checked) // choisir une ville avec radio buttons
+{}
+else {} */
+if(!termsConditions.checked) // validation des termes et conditions 
 {
-  
+  errorValidation.innerText='Vous devez vérifier que vous acceptez les termes et conditions';
+  errorValidation.classList.add('errorMsgInvalid');
+  errorValidation.style.marginBottom='20px';
 }
 else {
-
+  errorValidation.style.display='none';
+  conditionsCheck = true;
 }
-if(!checkBox1.checked) // validation des termes et conditions 
-{}
-else {}
 // validation si tous les elements checked sont valide 
 }
 
