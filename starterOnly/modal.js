@@ -123,7 +123,7 @@ if(!birth.value.match(/^\d{4}\-(0?[1-9]|1[012]])\-(0?[1-9]|[12][0-9]|3[01])$/)) 
   else {
     errorBirthDate.style.display='none';
     birth.style.border='2px solid green';
-    birthCheck = 'true';
+    birthCheck = true;
   }
 if(!numbTournament.value.match(numbers))  // definition conditions tournois avec les nombres et la const définie plus haut avant la fonction validate
   {
@@ -137,13 +137,14 @@ else {
   numbTournament.classList.add('validBorder');
   numbTournamentCheck = true;
 }
-if(!loc1.checked && !loc2.checked && !loc3.checked && !loc4.checked && !loc5.checked && !loc6.checked) 
+if(!loc1.checked && !loc2.checked && !loc3.checked && !loc4.checked && !loc5.checked && !loc6.checked) // choisir une ville avec radio buttons
 {
-  errorCity.innerText='Veuillez choisir une option';
-  errorCity.classList.add('errorMsgInvalid');
+  
 }
-else {}
-if(!checkBox1.checked)
+else {
+
+}
+if(!checkBox1.checked) // validation des termes et conditions 
 {}
 else {}
 // validation si tous les elements checked sont valide 
