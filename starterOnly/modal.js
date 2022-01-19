@@ -80,8 +80,7 @@ function validate () {
     errorFirst.style.color ='red';
     errorFirst.style.marginTop = '10px';
     errorFirst.style.fontSize ='0.8rem';
-  }
-  else {
+  } else {
     errorFirst.style.display ='none';
     firstName.style.border = '2px solid green';
     firstNameCheck = true;
@@ -94,22 +93,50 @@ if (!lastName.value.match(/(.*[a-z]){2}/i) || lastName.value == ' ' || lastName.
     errorLast.style.color ='red';
     errorLast.style.marginTop = '10px';
     errorLast.style.fontSize ='0.8rem';
-  }
-  else {
+  } else {
     errorLast.style.display='none';
     lastName.style.border='2px solid green';
     lastNameCheck = true;
   }
-// email avec regex à definir if ()
+// email avec regex 
+if (!/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/.test(eMail.value)) {
+  errorMail.innerText='Veuillez renseigner une adresse e-mail valide';
+  errorMail.style.color='red';
+  errorMail.style.marginTop='10px';
+  errorMail.style.fontSize='0.8rem';
+  eMail.style.border='2px solid red';
+
+} else {
+  errorMail.style.display='none';
+  eMail.style.border='2px solid green';
+  eMailcheck = true;
+}
 if(!birth.value.match(/^\d{4}\-(0?[1-9]|1[012]])\-(0?[1-9]|[12][0-9]|3[01])$/)) // defiinition de la birthdate avec un instruction en regex
   {
-    errorBirthDate.innerText='Veuillez rentrer votre date de naissance';
-
+    errorBirthDate.innerText='Veuillez devez entrer votre date de naissance';
+    errorBirthDate.style.fontSize = '0.8rem';
+    errorBirthDate.style.color='red';
+    errorBirthDate.style.marginTop = '10px';
+    birth.style.border = '2px solid red';
   }
-  else {}
-if(!numbTournament.value.match(numbers)) 
-{}
-else {}
+  else {
+    errorBirthDate.style.display='none';
+    birth.style.border='2px solid green';
+    birthCheck = 'true';
+  }
+if(!numbTournament.value.match(numbers))  // definition conditions tournois avec les nombres et la const définie plus haut avant la fonction validate
+  {
+    errorTournament.innerText='Vous devez rentrer un nombre';
+    errorTournament.style.fontSize='0.8rem';
+    errorTournament.style.color='red';
+    errorTournament.style.marginTop='10px';
+    numbTournament.style.border='2px solid red';
+  }
+else {
+  errorTournament.style.display='none';
+  numbTournament.style.border='2px solid green';
+  numbTournamentCheck = true;
+}
 if(!loc1.checked && !loc2.checked && !loc3.checked && !loc4.checked && !loc5.checked && !loc6.checked) 
 {}
 else {}
