@@ -58,6 +58,7 @@ const errorValidation = document.getElementById('msgErrorValidation');
 // const confirmation pour soumettre le formulaire
 
 //form data empecher le comportement basique du formulaire pour eviter l'envoie d'un formulaire vide > preventDefault
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 })
@@ -127,18 +128,20 @@ if(!birth.value.match(/^\d{4}\-(0?[1-9]|1[012]])\-(0?[1-9]|[12][0-9]|3[01])$/)) 
 if(!numbTournament.value.match(numbers))  // definition conditions tournois avec les nombres et la const définie plus haut avant la fonction validate
   {
     errorTournament.innerText='Vous devez rentrer un nombre';
-    errorTournament.style.fontSize='0.8rem';
-    errorTournament.style.color='red';
-    errorTournament.style.marginTop='10px';
-    numbTournament.style.border='2px solid red';
+    errorTournament.classList.add('errorMsgInvalid');
+    numbTournament.classList.add('errorMsgInvalidBorder');
   }
 else {
   errorTournament.style.display='none';
-  numbTournament.style.border='2px solid green';
+  numbTournament.classList.remove('errorMsgInvalidBorder');
+  numbTournament.classList.add('validBorder');
   numbTournamentCheck = true;
 }
 if(!loc1.checked && !loc2.checked && !loc3.checked && !loc4.checked && !loc5.checked && !loc6.checked) 
-{}
+{
+  errorCity.innerText='Veuillez choisir une option';
+  errorCity.classList.add('errorMsgInvalid');
+}
 else {}
 if(!checkBox1.checked)
 {}
