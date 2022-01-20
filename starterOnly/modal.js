@@ -13,9 +13,6 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeModal = document.querySelectorAll(".close");
-// const confirmation
-const confirmation = document.getElementById('confirmation');
-
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -57,10 +54,10 @@ const errorBirthDate = document.getElementById('msgErrorBirthDate');
 const errorTournament = document.getElementById('msgErrorTournament');
 const errorCity = document.getElementById('msgErrorCity');
 const errorValidation = document.getElementById('msgErrorValidation');
-// const confirmation pour soumettre le formulaire
-
-//form data empecher le comportement basique du formulaire pour eviter l'envoie d'un formulaire vide > preventDefault
-
+// const confirmation
+const confirmation = document.getElementById('confirmation');
+const confirmationCloseButton = document.getElementsByClassName('btn-close');
+//form empecher le comportement basique du formulaire pour eviter l'envoie d'un formulaire vide > preventDefault
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 })
@@ -159,6 +156,5 @@ if (firstNameCheck == true && lastNameCheck == true && eMailcheck == true && bir
     confirmation.style.display='flex';
   }
 }
-
-
-
+  // fermer la modal apres avoir envoyé le formulaire valide 
+  confirmationCloseButton[0].addEventListener("click", modalClose);
