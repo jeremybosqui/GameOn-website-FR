@@ -34,12 +34,7 @@ const lastName = document.getElementById('last');
 const eMail = document.getElementById('email');
 const birth = document.getElementById('birthdate');
 const numbTournament = document.getElementById('quantity');
-const loc1 = document.getElementById('location1');
-const loc2 = document.getElementById('location2');
-const loc3 = document.getElementById('location3');
-const loc4 = document.getElementById('location4');
-const loc5 = document.getElementById('location5');
-const loc6 = document.getElementById('location6');
+const cityLocation = document.getElementsByName('location');
 const form = document.getElementById('frmContact');
 // definition du format de la date
 const dateFormat = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
@@ -133,9 +128,15 @@ else {
   numbTournament.classList.add('validBorder');
   numbTournamentCheck = true;
 }
- if(!loc1.checked && !loc2.checked && !loc3.checked && !loc4.checked && !loc5.checked && !loc6.checked) // choisir une ville avec radio buttons
-{}
-else {}
+ if(!(cityLocation[0].checked || cityLocation[1].checked || cityLocation[2].checked || cityLocation[3].checked || cityLocation[4].checked || cityLocation[5].checked)) // choisir une ville avec radio buttons
+{
+  errorCity.innerText = 'Veuillez choisir une option';
+  errorCity.classList.add('errorMsgInvalid');
+  cityLocation.classList.add('errorMsgInvalidBorder');
+}
+else {
+  errorCity.style.display='none';
+}
 if(!termsConditions.checked) // validation des termes et conditions 
 {
   errorValidation.innerText='Vous devez vérifier que vous acceptez les termes et conditions';
