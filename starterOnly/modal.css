@@ -81,6 +81,19 @@ p {
 .topnav .icon {
   display: none;
 }
+/*=========== logo a  no style ===========*/
+#noStyle {
+  color: unset;
+  background-color: unset;
+  text-decoration: unset;
+  display: unset;
+}
+#noStyle:hover{
+  background-color: unset;
+  color:unset;
+  text-decoration: unset;
+  border: unset;
+}
 /*========== confirmation div + button close  ===============*/
 #confirmation {
   height: 754px;

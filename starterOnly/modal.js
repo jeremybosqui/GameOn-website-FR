@@ -150,6 +150,7 @@ else {
 // validation si tous les elements check sont valide 
 if (firstNameCheck == true && lastNameCheck == true && eMailcheck == true && birthCheck == true && numbTournamentCheck == true && conditionsCheck == true)
   {
+    
     form.style.display='none';
     confirmation.style.display='flex';
   }
