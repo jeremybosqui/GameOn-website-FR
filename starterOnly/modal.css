@@ -624,7 +624,7 @@ footer {
   }
 }
 
-/*@keyframes modalopen {
+@keyframes modalopen {
   from {
     opacity: 0;
     transform: translateY(-150px);
@@ -633,4 +633,4 @@ footer {
     opacity: 1;
   }
 }
-*/
+

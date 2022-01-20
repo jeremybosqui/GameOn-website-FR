@@ -76,52 +76,49 @@ function validate () {
  if (!firstName.value.match(/(.*[a-z]){2}/i) || firstName.value == ' ' || firstName.value == null || firstName.value.length < 2 )
   {
     errorFirst.innerText = 'Veuillez entrer 2 caractères ou plus dans le champ du prénom';
-    firstName.style.border = 'solid red 2px';
-    errorFirst.style.color ='red';
-    errorFirst.style.marginTop = '10px';
-    errorFirst.style.fontSize ='0.8rem';
+    firstName.classList.add('errorMsgInvalidBorder');
+    errorFirst.classList.add('errorMsgInvalid');
   } else {
     errorFirst.style.display ='none';
-    firstName.style.border = '2px solid green';
+    errorFirst.classList.remove('errorMsgInvalid');
+    firstName.classList.add('validBorder');
     firstNameCheck = true;
     
   }
 if (!lastName.value.match(/(.*[a-z]){2}/i) || lastName.value == ' ' || lastName.value == null || lastName.value.length < 2)
   {
     errorLast.innerText= 'Veuillez entrer 2 caractères ou plus dans le champ du nom '
-    lastName.style.border = 'solid red 2px';
-    errorLast.style.color ='red';
-    errorLast.style.marginTop = '10px';
-    errorLast.style.fontSize ='0.8rem';
+    lastName.classList.add('errorMsgInvalidBorder');
+    errorLast.classList.add('errorMsgInvalid');
   } else {
     errorLast.style.display='none';
-    lastName.style.border='2px solid green';
+    errorLast.classList.remove('errorMsgInvalid');
+    lastName.classList.add('validBorder');
     lastNameCheck = true;
   }
 // email avec regex 
 if (!/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/.test(eMail.value)) {
   errorMail.innerText='Veuillez renseigner une adresse e-mail valide';
-  errorMail.style.color='red';
-  errorMail.style.marginTop='10px';
-  errorMail.style.fontSize='0.8rem';
-  eMail.style.border='2px solid red';
+  errorMail.classList.add('errorMsgInvalid');
+  eMail.classList.add('errorMsgInvalidBorder');
 
 } else {
   errorMail.style.display='none';
-  eMail.style.border='2px solid green';
+  errorMail.classList.remove('errorMsgInvalid');
+  eMail.classList.add('validBorder');
   eMailcheck = true;
 }
 if(!birth.value.match(/^\d{4}\-(0?[1-9]|1[012]])\-(0?[1-9]|[12][0-9]|3[01])$/)) // defiinition de la birthdate avec un instruction en regex
   {
     errorBirthDate.innerText='Veuillez devez entrer votre date de naissance';
-    errorBirthDate.style.fontSize = '0.8rem';
-    errorBirthDate.style.color='red';
-    errorBirthDate.style.marginTop = '10px';
-    birth.style.border = '2px solid red';
+    errorBirthDate.style.marginBottom='10px';
+    errorBirthDate.classList.add('errorMsgInvalid');
+    birth.classList.add('errorMsgInvalidBorder');
   }
   else {
     errorBirthDate.style.display='none';
-    birth.style.border='2px solid green';
+    errorBirthDate.classList.remove('errorMsgInvalid');
+    errorBirthDate.classList.add('validBorder');
     birthCheck = true;
   }
 if(!numbTournament.value.match(numbers))  // definition conditions tournois avec les nombres et la const définie plus haut avant la fonction validate
@@ -149,7 +146,7 @@ else {
   errorValidation.style.display='none';
   conditionsCheck = true;
 }
-// validation si tous les elements checked sont valide 
+// validation si tous les elements check sont valide 
 if (firstNameCheck == true && lastNameCheck == true && eMailcheck == true && birthCheck == true && numbTournamentCheck == true && conditionsCheck == true)
   {
     form.style.display='none';
