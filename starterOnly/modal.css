@@ -575,9 +575,7 @@ footer {
     padding: unset;
     margin: unset;
   }
-  .content {
-    animation: unset;
-  }
+  
   .bground {
     position: relative;
     background: unset;

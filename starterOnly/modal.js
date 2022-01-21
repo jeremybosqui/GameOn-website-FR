@@ -7,7 +7,6 @@ function editNav() {
     x.className = "topnav";
   }
 }
-
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
@@ -15,19 +14,28 @@ const formData = document.querySelectorAll(".formData");
 const closeModal = document.querySelectorAll(".close");
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-//test
+//suppression elements genant dans l'html lors de l'ouverture du formulaire en version mobil / tablette
 const heroSection = document.querySelector('.hero-section');
+const footer = document.querySelector('.copyrights');
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
-  heroSection.style.display='none';
+  if(window.matchMedia("(max-width: 800px)").matches)  { //permet d'afficher le formulaire et de retirer les elements genants
+    heroSection.style.display='none';
+    footer.style.display='none';
+  } else {
+    heroSection.style.display='block';
+    footer.style.display='block';
+  }
 }
 // fermer l'event formulaire
 closeModal.forEach((c) => c.addEventListener("click", modalClose));
   // fermer modal form
   function modalClose(){
     modalbg.style.display = "none";
-    heroSection.style.display='block';
+    if(window.matchMedia("(max-width: 800px)").matches) { //permet d'afficher le formulaire et de retirer les éléments genants
+      heroSection.style.display='block';
+    }
   }
 // implementation du formulaire
 
@@ -69,7 +77,7 @@ function validate () {
 
   console.log(validate);
 
- if (!firstName.value.match(/(.*[a-z]){2}/i) || firstName.value == ' ' || firstName.value == null || firstName.value.length < 2 )
+ if (!firstName.value.match(/(.*[a-z]){2}/i) || firstName.value == "" || firstName.value == null || firstName.value.length < 2 )
   {
     errorFirst.innerText = 'Veuillez entrer 2 caractères ou plus dans le champ du prénom';
     firstName.classList.add('errorMsgInvalidBorder');
@@ -81,7 +89,7 @@ function validate () {
     firstNameCheck = true;
     
   }
-if (!lastName.value.match(/(.*[a-z]){2}/i) || lastName.value == ' ' || lastName.value == null || lastName.value.length < 2)
+if (!lastName.value.match(/(.*[a-z]){2}/i) || lastName.value == "" || lastName.value == null || lastName.value.length < 2)
   {
     errorLast.innerText= 'Veuillez entrer 2 caractères ou plus dans le champ du nom '
     lastName.classList.add('errorMsgInvalidBorder');
@@ -157,3 +165,5 @@ if (firstNameCheck == true && lastNameCheck == true && eMailcheck == true && bir
 }
   // fermer la modal apres avoir envoyé le formulaire valide 
   confirmationCloseButton[0].addEventListener("click", modalClose);
+  // fonction reset pour relancer le formulaire apres sa soumission 
+ 
