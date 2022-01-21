@@ -24,7 +24,6 @@ function launchModal() {
     heroSection.style.display='none';
     footer.style.display='none';
   } else {
-    heroSection.style.display='block';
     footer.style.display='block';
   }
 }
