@@ -131,7 +131,13 @@ p {
   #sautLigne {
     display: none;
   }
-
+  .topnav {
+    margin: unset;
+  }
+  .topnav a {
+    padding: 5px 5px;
+    font-size: 18px;
+  }
   .topnav a:hover {
     background-color: #ff0000c2;
     color: white;
@@ -166,11 +172,12 @@ p {
   .topnav.responsive a {
     float: none;
     display: block;
-    text-align: left;
+    
   }
   .hero-content {
     padding: 0px;
   }
+  
 }
 
 
@@ -181,6 +188,7 @@ p {
     float: right;
     display: block;
     color: #ff0000;
+    margin-top: 20px;
   }
   .hero-headline {
     font-size: 20px;
@@ -301,30 +309,7 @@ input {
   font-size: 20px;
   height: 48px;
 }
-/*
-.formData[data-error]::after {
-  content: attr(data-error);
-  font-size: 0.4em;
-  color: #e54858;
-  display: block;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  text-align: right;
-  line-height: 0.3;
-  opacity: 0;
-  transition: 0.3s;
-}
-.formData[data-error-visible="true"]::after {
-  opacity: 1;
-}
-.formData[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858;
-} 
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} */
+
 /* ============= error message invalid  ==============*/
 .errorMsgInvalid {
   color: red;
@@ -585,6 +570,20 @@ footer {
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
+  
+  main {
+    padding: unset;
+    margin: unset;
+  }
+  .content {
+    animation: unset;
+  }
+  .bground {
+    position: relative;
+    background: unset;
+    width: 100%;
+    top: 10px;
+  }
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -592,7 +591,6 @@ footer {
   #sautLigne {
     display: none;
   }
-  
   .hero-content {
     background: #fff;
     color: #000;
@@ -646,4 +644,3 @@ footer {
     opacity: 1;
   }
 }
-

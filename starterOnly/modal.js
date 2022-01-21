@@ -15,16 +15,19 @@ const formData = document.querySelectorAll(".formData");
 const closeModal = document.querySelectorAll(".close");
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
+//test
+const heroSection = document.querySelector('.hero-section');
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  heroSection.style.display='none';
 }
 // fermer l'event formulaire
 closeModal.forEach((c) => c.addEventListener("click", modalClose));
   // fermer modal form
   function modalClose(){
     modalbg.style.display = "none";
+    heroSection.style.display='block';
   }
 // implementation du formulaire
 
@@ -36,8 +39,6 @@ const birth = document.getElementById('birthdate');
 const numbTournament = document.getElementById('quantity');
 const cityLocation = document.getElementsByName('location');
 const form = document.getElementById('frmContact');
-// definition du format de la date
-const dateFormat = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
 // definition format des nombres
 const numbers = /^[0-9]+$/;
 // definition const validation message error
@@ -150,7 +151,6 @@ else {
 // validation si tous les elements check sont valide 
 if (firstNameCheck == true && lastNameCheck == true && eMailcheck == true && birthCheck == true && numbTournamentCheck == true && conditionsCheck == true)
   {
-    
     form.style.display='none';
     confirmation.style.display='flex';
   }
