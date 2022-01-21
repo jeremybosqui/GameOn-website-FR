@@ -23,8 +23,6 @@ function launchModal() {
   if(window.matchMedia("(max-width: 800px)").matches)  { //permet d'afficher le formulaire et de retirer les elements genants
     heroSection.style.display='none';
     footer.style.display='none';
-  } else {
-    footer.style.display='block';
   }
 }
 // fermer l'event formulaire
@@ -34,6 +32,7 @@ closeModal.forEach((c) => c.addEventListener("click", modalClose));
     modalbg.style.display = "none";
     if(window.matchMedia("(max-width: 800px)").matches) { //permet d'afficher le formulaire et de retirer les éléments genants
       heroSection.style.display='block';
+      footer.style.display='block';
     }
   }
 // implementation du formulaire
