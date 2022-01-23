@@ -309,20 +309,36 @@ input {
   font-size: 20px;
   height: 48px;
 }
+/*======== modificafion style des inputs lors d'une erreur dedans  ===============*/
+.formData[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.6em;
+  color: #e54858;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  line-height: 0.3;
+  opacity: 0;
+  transition: 0.3s;
+}
+.formData[data-error-visible="true"]::after {
+  opacity: 1;
+}
+.formData[data-error-visible="true"] .text-control {
+  border: 2px solid #e54858;
+}
 
-/* ============= error message invalid  ==============*/
-.errorMsgInvalid {
-  color: red;
-  margin-top: 10px;
-  font-size: 0.8rem;
+input[data-error]::after {
+    content: attr(data-error);
+    font-size: 0.4em;
+    color: red;
 }
-.errorMsgInvalidBorder {
-  border: 2px solid red;
+.formData[data-error-visible="false"]::after {
+  opacity: 0;
 }
-/* ========= message valid  border ===============*/
-.validBorder  {
+.formData[data-error-visible="false"] .text-control {
   border: 2px solid green;
-}
+}  /*==============  fin de modification   =====================*/
 .checkbox-label,
 .checkbox2-label {
   position: relative;

@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <title>Reservation</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="modal.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="/starterOnly/modal.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans"
       rel="stylesheet"
     />
-    <script src="modal.js" defer></script>
+    <script src="/starterOnly/modal.js" defer></script>
   </head>
   <body>
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-        <a id="noStyle" href="index.html"><div id="imageLogo"></div></a>
+      <img alt="logo" src="/starterOnly/Logo.png" width="auto" height="auto" />
       </div>
       <div class="main-navbar">
-        
-        <a href="#" class="active1">
-          <span id="disabled">Accueil</span></a>
-        <a href="#" class="active">
-          <span id="underLine">Détails de l'évènement</span></a>
+        <a href="#" class="active"><span>Accueil</span></a>
+        <a href="#"><span>Détails de l'évènement</span></a>
         <a href="#"><span>À propos</span></a>
         <a href="#"><span>Contact</span></a>
         <a href="#"><span>Évènements passés</span></a>
@@ -31,107 +28,95 @@
         </a>
       </div>
     </div>
-  </div>
-    <main id="main">
+    <main>
       <div class="hero-section">
         <div class="hero-content">
           <h1 class="hero-headline">
-            Marathon national <br id="sautLigne"> de jeux vidéos
+            Marathon national<br>
+            de jeux vidéos
           </h1>
           <p class="hero-text">
             Vous aimez jouer ? Notre prochain évènement gaming est ouvert
             aux réservations... Places limitées !
           </p>
-          <button type="button" class="btn-signup modal-btn">
+          <button class="btn-signup modal-btn">
             je m'inscris
           </button>
         </div>
         <div class="hero-img">
-          <img src="./bg_img.jpg" alt="img" />
+          <img src="/starterOnly/bg_img.jpg" alt="img" />
         </div>
-        <button type="button" class="btn-signup modal-btn">
+        <button class="btn-signup modal-btn">
           je m'inscris
         </button>
       </div>
+
       <div class="bground">
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
-            <div id="confirmation">
-              <h1>Merci pour <br> votre inscription</h1>
-              <button class="btn-close">Fermer</button>
-            </div>
             <form
-              id="frmContact"
-              method="get"
-              onsubmit="return validate();"
+              id="form"
+              name="reserve"
               action="index.html"
-              novalidate
+              method="get"
+              onsubmit="submitForm"
             >
               <div
-                class="formData">
-                <label for="first" >Prénom</label><br>
+                class="formData" data-error="Veuillez entrer 2 caractères ou plus pour le champ du prénom" >
+                <label for="first">Prénom</label><br>
                 <input
                   class="text-control"
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2"
-                  placeholder="Max"
                 /><br>
               </div>
-              <div id="msgErrorFirst"></div>
               <div
-                class="formData">
+                class="formData" data-error="Veuillez entrer 2 caractères ou plus pour le champ du nom">
                 <label for="last">Nom</label><br>
                 <input
-                  placeholder="Brunoixe"
                   class="text-control"
                   type="text"
                   id="last"
-                  
+                  name="last"
                 /><br>
               </div>
-              <div id="msgErrorLast"></div>
               <div
-                class="formData">
+                class="formData" data-error="Veuillez rentrer une adresse mail valide">
                 <label for="email">E-mail</label><br>
                 <input
-                  placeholder="jonglrer99@gmail.com"
                   class="text-control"
                   type="email"
                   id="email"
-                  
+                  name="email" 
                 /><br>
               </div>
-              <div id="msgErrorMail"></div>
               <div
-                class="formData">
+                class="formData" data-error="Vous devez entrer votre date de naissance.">
                 <label for="birthdate">Date de naissance</label><br>
                 <input
                   class="text-control"
                   type="date"
                   id="birthdate"
-                  
+                  name="birthdate"
+                  min="01/01/2020"
                 /><br>
               </div>
-              <div id="msgErrorBirthDate"></div>
               <div
-                class="formData">
+                class="formData" data-error="Veuillez rentrer le nombre de participation">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input placeholder="5" type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" >
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
-              <div id="msgErrorTournament"></div>
-              <p class="text-label">À quel tournoi souhaitez-vous participer cette année ?</p>
+              <p class="text-label">Quelles villes ?</p>
               <div
-                class="formData">
+                class="formData" data-error="Vous devez choisir une option">
                 <input
                   class="checkbox-input"
                   type="radio"
                   id="location1"
                   name="location"
                   value="New York"
-                  
                 />
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
@@ -143,7 +128,6 @@
                   id="location2"
                   name="location"
                   value="San Francisco"
-                  
                 />
                 <label class="checkbox-label" for="location2">
                   <span class="checkbox-icon"></span>
@@ -155,7 +139,6 @@
                   id="location3"
                   name="location"
                   value="Seattle"
-                  
                 />
                 <label class="checkbox-label" for="location3">
                   <span class="checkbox-icon"></span>
@@ -167,7 +150,6 @@
                   id="location4"
                   name="location"
                   value="Chicago"
-                  
                 />
                 <label class="checkbox-label" for="location4">
                   <span class="checkbox-icon"></span>
@@ -179,7 +161,6 @@
                   id="location5"
                   name="location"
                   value="Boston"
-                  
                 />
                 <label class="checkbox-label" for="location5">
                   <span class="checkbox-icon"></span>
@@ -191,21 +172,20 @@
                   id="location6"
                   name="location"
                   value="Portland"
-                  
                 />
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
               </div>
-              <div id="msgErrorCity"></div>
 
               <div
-                class="formData">
+                class="formData" data-error="Vous devez vérifier que vous acceptez les termes et conditions.">
                 <input
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
+                  name="conditions"
                   checked
                 />
                 <label class="checkbox2-label" for="checkbox1">
@@ -213,19 +193,19 @@
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
-                <input class="checkbox-input" type="checkbox" id="checkbox2"/>
+                <input class="checkbox-input" type="checkbox" id="checkbox2" name="conditions"/>
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
               </div>
-              <div id="msgErrorValidation"></div>
               <input
                 class="btn-submit"
                 type="submit"
                 class="button"
                 value="C'est parti"
+                id="btn-submit"
               />
             </form>
           </div>
@@ -234,7 +214,7 @@
     </main>
     <footer>
       <p class="copyrights">
-        Copyright 2014 - 2022, GameOn Inc.
+        Copyright 2014 - 2020, GameOn Inc.
       </p>
     </footer>
   </body>
