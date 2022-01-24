@@ -17,7 +17,7 @@ body {
   background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
-  max-width: 1300px;
+  
   margin: 0 auto;
 }
 
@@ -273,7 +273,6 @@ main {
 .content {
   margin: 5% auto;
   width: 100%;
-  max-width: 500px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
   background: #232323;
@@ -283,7 +282,10 @@ main {
   color: #fff;
   padding-top: 10px;
 }
-
+/*=======================  desactive le bouton accueil  ==================*/
+#disabled {
+  display: none;
+}
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
@@ -591,12 +593,15 @@ footer {
     padding: unset;
     margin: unset;
   }
-  
+  .content {
+    border-radius: 10px 10px 0px 0px;
+  }
   .bground {
     position: relative;
     background: unset;
     width: 100%;
     top: 10px;
+    background: #232323;
   }
   .hero-section {
     display: block;
