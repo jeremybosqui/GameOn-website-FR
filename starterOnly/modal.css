@@ -20,10 +20,8 @@ body {
   
   margin: 0 auto;
 }
+/*=======================  desactive le bouton accueil  ==================*/
 
-#disabled {
-  display: none;
-}
 .active1:hover {
   display: none;
 }
@@ -122,9 +120,6 @@ p {
     display: block;
     color: #ff0000;
   }
-  #disabled {
-    display: block;
-  }
   .active1 {
    cursor: pointer;
   }
@@ -178,7 +173,7 @@ p {
     padding: 0px;
   }
   
-}
+} /* =================  FIN RESPONSIVE 768px     ===================*/
 
 
 
@@ -200,7 +195,7 @@ p {
   .hero-content {
     padding: 0px;
   }
-} 
+} /* ================= FIN RESPONSIVE 540px  ==============================*/
 
 main {
   font-size: 130%;
@@ -282,10 +277,7 @@ main {
   color: #fff;
   padding-top: 10px;
 }
-/*=======================  desactive le bouton accueil  ==================*/
-#disabled {
-  display: none;
-}
+
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
@@ -652,7 +644,7 @@ footer {
     padding-right: 1rem;
     margin: 10px 0px 0px 20px;
   }
-}
+} /*================== FIN RESPONSIVE 800px ==============================*/
 
 @keyframes modalopen {
   from {
@@ -661,5 +653,11 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+/*======    disparition du bouton accueil   =========*/
+@media  (min-width: 769px) and (max-width: 800px) { 
+  #disable {
+    display: none;
   }
 }
