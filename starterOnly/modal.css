@@ -127,11 +127,14 @@ p {
     display: none;
   }
   .topnav {
-    margin: unset;
+    margin: 20px;
   }
   .topnav a {
     padding: 5px 5px;
-    font-size: 18px;
+    font-size: 20px;
+  }
+  .topnav a.icon {
+    font-size: 25px;
   }
   .topnav a:hover {
     background-color: #ff0000c2;
@@ -580,7 +583,13 @@ footer {
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
-  
+  .hero-img {
+    margin: 20px;
+  }
+  #imgLogo {
+    width: 145px;
+    margin: 20px 0px 0px 0px;
+  }
   main {
     padding: unset;
     margin: unset;
@@ -594,6 +603,7 @@ footer {
     width: 100%;
     top: 10px;
     background: #232323;
+    border-radius: 10px 10px 0px 0px;
   }
   .hero-section {
     display: block;
@@ -615,13 +625,15 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 37px;
+    font-size: 45px;
     font-weight: 600;
     white-space: normal;
+    margin: -15px 20px 20px 20px;
   }
   .hero-text {
     width: unset;
-    font-size: 12px;
+    font-size: 15px;
+    margin: 20px;
   }
   .hero-img img {
     border-radius: 10px;
@@ -659,5 +671,17 @@ footer {
 @media  (min-width: 769px) and (max-width: 800px) { 
   #disable {
     display: none;
+  }
+}
+/*===================*/
+@media screen and (min-width: 801px) {
+  #disable {
+    display: none;
+  }
+  .content {
+    width: 55%;
+  }
+  main {
+    font-size: 200%;
   }
 }
