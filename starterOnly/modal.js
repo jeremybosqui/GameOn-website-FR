@@ -81,7 +81,11 @@ function closeBtn() { //creation du bouton pour la modal de remerciement
   btn.style.marginTop = "50px"
   btn.onclick = function() { // disparition de la modal contenant les donnes du formulaire pour afficher celle des remerciements
     modalbg.style.display = "none";
-    };
+    if(window.matchMedia("(max-width: 800px)").matches) { //permet d'afficher le bloc du maint et de retirer le formulaire
+      heroSection.style.display='block';
+      footer.style.display='block';
+    }
+    }
 }
 function disableSubmitBtn () { // rendre le bouton inoperant quand le formulaire n'est pas valide
   submitBtn.disabled = true;
