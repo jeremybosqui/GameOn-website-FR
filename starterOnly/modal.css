@@ -47,7 +47,7 @@ p {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  margin: 45px -10px 65px 30px;
+  margin: 45px 0px 65px 30px;
 }
 
 .topnav a {
@@ -271,6 +271,7 @@ main {
 .content {
   margin: 5% auto;
   width: 100%;
+  max-width: 500px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
   background: #232323;
@@ -545,10 +546,11 @@ input[data-error]::after {
   white-space: nowrap;
 }
 .hero-text {
-  width: 146%;
-  font-weight: normal;
-  margin-top: 30px;
-  padding: 0;
+    width: 145%;
+    font-weight: normal;
+    margin-top: 30px;
+    padding: 0;
+    font-size: 25px;
 }
 .btn-signup {
   outline: none;
@@ -596,6 +598,9 @@ footer {
   }
   .content {
     border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    max-width: 800px;
+    margin: unset;
   }
   .bground {
     position: relative;
@@ -678,10 +683,11 @@ footer {
   #disable {
     display: none;
   }
-  .content {
-    width: 55%;
-  }
-  main {
-    font-size: 200%;
+}
+/*=========================*/
+@media screen and (min-width: 1150px) {
+  .hero-section {
+    min-height: 10vh;
+    height: 660px;
   }
 }
