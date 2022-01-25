@@ -108,7 +108,7 @@ function FirstNameValid () { // fonction pour la validation du prenom
   if (firstName.value.length < 2) {
     msgError(parent);
     return false;
-  } 
+  }
   if (firstName.value.length > 15) {
     msgError(parent);
     return false;
