@@ -105,11 +105,11 @@ function hideMsgError(el) { //cacher le texte invalid
 }
 function FirstNameValid () { // fonction pour la validation du prenom
   let parent = firstName.closest('div');
-  if (firstName.value.length < 2) {
+  if (firstName.value.length <2) {
     msgError(parent);
     return false;
   }
-  if (firstName.value.length > 15) {
+  if (firstName.value.length >15) {
     msgError(parent);
     return false;
   }
@@ -123,7 +123,7 @@ function FirstNameValid () { // fonction pour la validation du prenom
 function LastNameValid () { // fonction pour la validation du nom
   let parent = lastName.closest('div');
   msgError(parent);
-  if (lastName.value.length < 2) {
+  if (lastName.value.length <2) {
     return false
   }
   if (!/^([^0-9]*)$/.test(lastName.value)) { // regex pour la validation du nom
@@ -180,7 +180,7 @@ function LocationValid () { // fonction pour valider la localisation souhaite
 function NumbPartValid () { // fonction pour le nombre de partie à valider
   let parent = numbPart.closest('div'); 
   msgError(parent);
-  if (numbPart.value < '0') {
+  if (numbPart.value <'0') {
     return false;
   } 
     hideMsgError(parent);
