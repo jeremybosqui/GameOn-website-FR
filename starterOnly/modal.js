@@ -2,18 +2,18 @@
 // DOM Elements
 const heroSection = document.querySelector('.hero-section');
 const footer = document.querySelector('.copyrights');
-let modalBody = document.querySelector(".modal-body");
-let modalbg = document.querySelector(".bground");
-let modalBtn = document.querySelectorAll(".modal-btn");
-let closeModal = document.getElementsByClassName("close")[0];
-let firstName = document.getElementById('first');
-let lastName = document.getElementById('last');
-let email = document.getElementById('email');
-let birthdate = document.getElementById('birthdate');
-let numbPart = document.querySelector("input[type=number]");
-let submitBtn = document.getElementById('btn-submit');
-let locationCheckboxes = document.querySelectorAll("input[name='location']");
-let conditionsCheckboxes = document.querySelector("input[name='conditions']");
+const modalBody = document.querySelector(".modal-body");
+const modalbg = document.querySelector(".bground");
+const modalBtn = document.querySelectorAll(".modal-btn");
+const closeModal = document.getElementsByClassName("close")[0];
+const firstName = document.getElementById('first');
+const lastName = document.getElementById('last');
+const email = document.getElementById('email');
+const birthdate = document.getElementById('birthdate');
+const numbPart = document.querySelector("input[type=number]");
+const submitBtn = document.getElementById('btn-submit');
+const locationCheckboxes = document.querySelectorAll("input[name='location']");
+const conditionsCheckboxes = document.querySelector("input[name='conditions']");
 
 modalFormLaunch(); // appel de la fonction qui ouvre la modal
 modalFormClose(); // appel de la fonction qui ferme la  modal
