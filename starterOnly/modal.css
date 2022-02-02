@@ -154,9 +154,6 @@ p {
   text-decoration: underline;
   border-radius: 10px;
   }
-  .hero-headline {
-    font-size: 20px;
-  }  
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -630,14 +627,14 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 45px;
-    font-weight: 600;
+    font-size: 37px;
+    font-weight: 300;
     white-space: normal;
     margin: -15px 20px 20px 20px;
   }
   .hero-text {
     width: unset;
-    font-size: 15px;
+    font-size: 13px;
     margin: 20px;
   }
   .hero-img img {

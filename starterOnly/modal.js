@@ -138,7 +138,7 @@ function BirthdateValid () {
   let now = new Date();
   msgError(parent);
   parent.style.marginBottom='20px';
-  if (!/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/.test(reserve.birthdate.value)) { // regex pour la validation de la date
+  if (!/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/.test(formulAire.birthdate.value)) { // regex pour la validation de la date
     return false;
   }
   if (selectedDate > now) { // empeche de rentrer la date du jour comme date de naissance
@@ -150,7 +150,7 @@ function BirthdateValid () {
 function EmailValid () { // fonction pour verifier si l'email est valid
   let parent = email.closest('div');
   msgError(parent);
-  if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(reserve.email.value)) { // regex pour la validation de l'email
+  if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formulAire.email.value)) { // regex pour la validation de l'email
     return false;
   }
   hideMsgError(parent);
